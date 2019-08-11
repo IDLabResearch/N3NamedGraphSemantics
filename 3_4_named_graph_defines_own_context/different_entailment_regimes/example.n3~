@@ -1,0 +1,16 @@
+PREFIX ex: <https://example.org/ns/example#> 
+PREFIX : <https://example.org/ns/semantics#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+
+ex:g1 :ownContext1 { ex:YoutubeEmployee  rdfs:subClassOf  ex:GoogleEmployee .
+        ex:steveChen  rdf:type  ex:YoutubeEmployee . }.
+ex:g2 :ownContext1 { ex:chadHurley  rdf:type  ex:YoutubeEmployee. 
+                     ex:chadHurly ex:knows ex:steveChen.
+                     ex:knows rdfs:domain ex:Person.
+                    }.
+
+ex:g1 :entailment <http://eulersharp.sourceforge.net/2003/03swap/rdfs-subClassOf.n3> .
+ex:g2 :entailment <http://eulersharp.sourceforge.net/2003/03swap/rdfs-domain.n3>.

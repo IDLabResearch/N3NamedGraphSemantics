@@ -1,0 +1,15 @@
+#Processed by EYE v19.0705.1450 josd
+#eye example.n3 --pass-all-ground --nope
+
+PREFIX var: <http://josd.github.io/eye/.well-known/genid/EtuiAhZbR3tj8qoSivqog3mwMRw#>
+PREFIX ex: <https://example.org/ns/example#>
+PREFIX : <https://example.org/ns/semantics#>
+
+ex:s ex:p ex:o.
+ex:g1 :defaultGraphAsUnion {ex:a ex:b ex:c}.
+ex:g2 :defaultGraphAsUnion {var:x ex:y ex:z}.
+ex:g3 :defaultGraphAsUnion {var:x ex:yy ex:zz}.
+
+#2019-08-10T15:55:44.546Z in=4 out=4 ent=4 step=4 brake=1 inf=21285 sec=0.059 inf/sec=360763
+#ENDS
+

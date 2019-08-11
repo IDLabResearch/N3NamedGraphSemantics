@@ -1,0 +1,14 @@
+#Processed by EYE v19.0705.1450 josd
+#eye out.n3 --query interpretation.n3 --nope --no-skolem http://josd.github.io/eye/.well-known/genid/EtuiAhZbR3tj8qoSivqog3mwMRw#
+
+PREFIX var: <http://josd.github.io/eye/.well-known/genid/EtuiAhZbR3tj8qoSivqog3mwMRw#>
+PREFIX ex: <https://example.org/ns/example#>
+PREFIX : <https://example.org/ns/semantics#>
+
+ex:a ex:b ex:c.
+_:t_0 ex:y ex:z.
+_:t_0 ex:yy ex:zz.
+
+#2019-08-10T15:58:47.733Z in=5 out=3 ent=3 step=3 brake=1 inf=21986 sec=0.060 inf/sec=366433
+#ENDS
+

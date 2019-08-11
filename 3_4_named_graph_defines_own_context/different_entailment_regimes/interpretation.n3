@@ -1,0 +1,28 @@
+PREFIX ex: <https://example.org/ns/example#> 
+PREFIX : <https://example.org/ns/semantics#> 
+PREFIX log: <http://www.w3.org/2000/10/swap/log#>
+PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
+
+{
+?x :ownContext2 ?y. 
+#other things could be stated in the same context
+_:x e:findall (?c {?x :ownContext2 ?c.} ?cs). 
+#conjunction of all graphs in the context
+?cs log:conjunction ?con.
+
+#here we have the entailment regime, each graph has its own
+?x :entailment ?regime.
+?regime log:semantics ?graph.
+
+#conjundtion of contexts and entailment
+(?con ?graph) log:conjunction ?all.
+
+#now we take the consequence of all that
+?all log:conclusion ?out
+
+}
+=>
+{
+#the outcome is only valid in the context
+?x :ownContext1 ?out
+}.

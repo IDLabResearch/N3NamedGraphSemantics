@@ -1,0 +1,20 @@
+#Processed by EYE v19.0705.1450 josd
+#eye example.n3 interpretation.n3 --pass --nope
+
+PREFIX ex: <https://example.org/ns/example#>
+PREFIX : <https://example.org/ns/semantics#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX log: <http://www.w3.org/2000/10/swap/log#>
+
+ex:s ex:p ex:o.
+ex:g1 :defaultGraphAsMerge {ex:a ex:b ex:c}.
+ex:g2 :defaultGraphAsMerge {_:e_x_1 ex:y ex:z}.
+ex:g3 :defaultGraphAsMerge {_:e_x_2 ex:yy ex:zz}.
+ex:a ex:b ex:c.
+_:e_x_1 ex:y ex:z.
+_:e_x_2 ex:yy ex:zz.
+
+#2019-08-10T20:21:59.661Z in=5 out=7 ent=10 step=20 brake=2 inf=35269 sec=0.080 inf/sec=440863
+#ENDS
+

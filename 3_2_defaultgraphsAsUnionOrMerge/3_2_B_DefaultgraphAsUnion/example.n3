@@ -1,0 +1,13 @@
+PREFIX ex: <https://example.org/ns/example#> 
+PREFIX : <https://example.org/ns/semantics#> 
+
+
+#EXAMPLE 6
+ex:s ex:p ex:o.
+ex:g1 :defaultGraphAsUnion {ex:a ex:b ex:c}.
+
+#Addional union example
+ex:g2 :defaultGraphAsUnion {_:x ex:y ex:z}.
+ex:g3 :defaultGraphAsUnion {_:x ex:yy ex:zz}.
+
+
