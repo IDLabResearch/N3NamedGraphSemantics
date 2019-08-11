@@ -1,0 +1,15 @@
+#Processed by EYE v19.0705.1450 josd
+#eye example.n3 graphRule.n3 --nope --query goal.n3
+
+PREFIX ex: <https://example.org/ns/example#>
+PREFIX : <https://example.org/ns/semantics#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+:example3a :triggered true.
+:example3b :triggered true.
+:example5 :triggered true.
+
+#2019-08-11T21:56:55.369Z in=10 out=3 ent=3 step=3 brake=1 inf=30787 sec=0.063 inf/sec=488683
+#ENDS
+

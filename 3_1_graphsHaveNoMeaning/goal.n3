@@ -1,0 +1,35 @@
+PREFIX ex: <https://example.org/ns/example#> 
+PREFIX : <https://example.org/ns/semantics#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+
+#we test the different examples by having them as goals
+
+
+#Example 2
+
+{ ex:s  ex:p  ex:o .
+  ex:a  ex:b  ex:c .}
+=>
+{:example2 :triggered true}.
+
+#but dataset-entails:
+#Example 3
+
+{} =>  {:example3a :triggered true}.
+
+{ex:g2 :noMeaning { ex:x  ex:y  ex:z }}
+=>
+{:example3b :triggered true}.
+
+
+
+#Example 5
+
+{ ex:g11  ex:author  ex:Bob .
+  ex:g11  ex:created  "2013-09-17"^^xsd:date .
+ex:g11 :noMeaning  { ex:x  ex:y  ex:z }
+}
+=>
+{:example5 :triggered true}.
