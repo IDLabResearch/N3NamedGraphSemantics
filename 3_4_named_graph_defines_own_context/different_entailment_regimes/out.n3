@@ -9,9 +9,9 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX log: <http://www.w3.org/2000/10/swap/log#>
 PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
 
-ex:g1 :ownContext1 {ex:YoutubeEmployee rdfs:subClassOf ex:GoogleEmployee. ex:steveChen a ex:YoutubeEmployee. ex:steveChen a ex:GoogleEmployee. {_:sk_0 rdfs:subClassOf _:sk_1. _:sk_2 a _:sk_0} => {_:sk_2 a _:sk_1}. {_:sk_3 rdfs:subClassOf _:sk_4. _:sk_4 rdfs:subClassOf _:sk_5} => {_:sk_3 rdfs:subClassOf _:sk_5}. {_:sk_6 rdfs:subClassOf _:sk_7. _:sk_8 rdfs:domain _:sk_6} => {_:sk_8 rdfs:domain _:sk_7}. {_:sk_9 rdfs:subClassOf _:sk_10. _:sk_11 rdfs:range _:sk_9} => {_:sk_11 rdfs:range _:sk_10}}.
-ex:g2 :ownContext1 {ex:chadHurley a ex:YoutubeEmployee. ex:chadHurly a ex:Person. ex:chadHurly ex:knows ex:steveChen. ex:knows rdfs:domain ex:Person. {_:sk_0 rdfs:domain _:sk_1. _:sk_2 _:sk_0 _:sk_3} => {_:sk_2 a _:sk_1}}.
+ex:g1 :ownContext2 {ex:YoutubeEmployee rdfs:subClassOf ex:GoogleEmployee. ex:steveChen a ex:YoutubeEmployee. ex:steveChen a ex:GoogleEmployee. {_:sk_0 rdfs:subClassOf _:sk_1. _:sk_2 a _:sk_0} => {_:sk_2 a _:sk_1}. {_:sk_3 rdfs:subClassOf _:sk_4. _:sk_4 rdfs:subClassOf _:sk_5} => {_:sk_3 rdfs:subClassOf _:sk_5}. {_:sk_6 rdfs:subClassOf _:sk_7. _:sk_8 rdfs:domain _:sk_6} => {_:sk_8 rdfs:domain _:sk_7}. {_:sk_9 rdfs:subClassOf _:sk_10. _:sk_11 rdfs:range _:sk_9} => {_:sk_11 rdfs:range _:sk_10}}.
+ex:g2 :ownContext2 {ex:chadHurley a ex:YoutubeEmployee. ex:chadHurly a ex:Person. ex:chadHurly ex:knows ex:steveChen. ex:knows rdfs:domain ex:Person. {_:sk_0 rdfs:domain _:sk_1. _:sk_2 _:sk_0 _:sk_3} => {_:sk_2 a _:sk_1}}.
 
-#2019-08-11T19:59:43.415Z in=22 out=2 ent=2 step=2 brake=2 inf=64763 sec=0.077 inf/sec=841078
+#2019-08-12T14:02:34.298Z in=22 out=2 ent=2 step=2 brake=1 inf=62568 sec=0.045 inf/sec=1390400
 #ENDS
 

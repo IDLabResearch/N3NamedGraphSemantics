@@ -4,17 +4,15 @@ PREFIX log: <http://www.w3.org/2000/10/swap/log#>
 PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
 
 {
-?x :ownContext1 ?y. 
-#other things could be stated in the same context
-_:x e:findall (?c {?x :ownContext1 ?c.} ?cs). 
-#conjunction of all graphs in the context
-?cs log:conjunction ?con.
+?x :ownContext2 ?y. 
 
-#here we have the entailment regime, we take rdfs-subclassOf as example
-<http://eulersharp.sourceforge.net/2003/03swap/rdfs-subClassOf.n3> log:semantics ?graph.
 
-#conjundtion of contexts and entailment
-(?con ?graph) log:conjunction ?all.
+#here we have the entailment regime, each graph has its own
+?x :entailment ?regime.
+?regime log:semantics ?graph.
+
+#conjunction of context and entailment
+(?y ?graph) log:conjunction ?all.
 
 #now we take the consequence of all that
 ?all log:conclusion ?out

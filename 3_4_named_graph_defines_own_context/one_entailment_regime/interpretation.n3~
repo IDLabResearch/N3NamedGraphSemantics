@@ -23,5 +23,5 @@ _:x e:findall (?c {?x :ownContext1 ?c.} ?cs).
 =>
 {
 #the outcome is only valid in the context
-?x :ownContext1All ?out
+?x :ownContext1 ?out
 }.
