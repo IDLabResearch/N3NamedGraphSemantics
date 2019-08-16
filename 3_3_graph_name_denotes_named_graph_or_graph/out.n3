@@ -1,0 +1,16 @@
+#Processed by EYE v19.0814.1148 josd
+#eye example.n3 --pass --nope
+
+PREFIX ex: <https://example.org/ns/example#>
+PREFIX : <https://example.org/ns/semantics#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+ex:g1 :denotes {ex:a ex:b ex:c}.
+ex:g2 :denotes {ex:x ex:y ex:z}.
+:example10 :triggered true.
+:example11 :triggered true.
+
+#2019-08-16T21:41:39.206Z in=5 out=4 ent=2 step=4 brake=2 inf=24871 sec=0.057 inf/sec=436333
+#ENDS
+
