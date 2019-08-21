@@ -1,0 +1,26 @@
+PREFIX : <https://example.org/ns/example#> 
+PREFIX sem: <https://example.org/ns/semantics#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX sct: <https://example.org/ns/example/snomed#> 
+PREFIX dc: <https://example.org/ns/example/dc#> 
+PREFIX math: <http://www.w3.org/2000/10/swap/math#>
+
+:rd1 sem:isolatedGraph 
+  {  _:avd a :Recommendation ;
+          :ageRange [:op math:lessThan ; :limit "19"^^ xsd:int ];
+          sct:associatedFinding [ a :ViralDisease ] ;
+          sct:findingContext sct:Suspected ;
+          sct:associatedProcedure [ a sct:SalicylateProphylaxis ];
+          sct:procedureContext sct:Contraindicated .
+     :p0 :age "11"^^ xsd:int ;
+          :prescription [ a sct:SalicylateProphylaxis ] ;
+          :hasContext _:pc0 .
+
+     _:pc0 sct:associatedFinding [ a :ViralDisease ] ;
+     sct:findingContext sct:Suspected };
+
+  sem:entailment <rule2.n3> .
+
+

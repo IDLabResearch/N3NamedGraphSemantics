@@ -1,0 +1,22 @@
+PREFIX : <https://example.org/ns/example#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX sct: <https://example.org/ns/example/snomed#> 
+PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
+
+
+{ ?rec a :Recommendation ; :ageRange ?ar .
+?ar :op ?op ; :limit ?lim . ?p :age ?a . ?a ?op ?lim .
+
+?p :hasContext ?c .
+?c sct:associatedFinding [ a ?fin ] ;
+sct:findingContext sct:Suspected .
+?rec sct:associatedFinding [ a ?fin ] ;
+sct:findingContext sct:Suspected .
+?p :prescription [ a ?pre ] .
+?rec sct:associatedProcedure [ a ?pre ] ;
+sct:procedureContext sct:Contraindicated
+ } = > {
+_:x a :ContraindicationWarning ; :causedBy ?pre } .
+    

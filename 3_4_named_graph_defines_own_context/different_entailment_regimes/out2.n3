@@ -1,0 +1,19 @@
+#Processed by EYE v19.0817.2233 josd
+#eye example2.n3 --query interpretation.n3 --nope
+
+PREFIX : <https://example.org/ns/example#>
+PREFIX sem: <https://example.org/ns/semantics#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX sct: <https://example.org/ns/example/snomed#>
+PREFIX dc: <https://example.org/ns/example/dc#>
+PREFIX math: <http://www.w3.org/2000/10/swap/math#>
+PREFIX log: <http://www.w3.org/2000/10/swap/log#>
+PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
+
+:rd1 sem:isolatedGraph {_:e_e_e_avd_1_1_1 a :Recommendation. _:e_e_bn_2_1_1 a :ViralDisease. _:e_e_bn_3_1_1 a sct:SalicylateProphylaxis. _:e_e_bn_4_1_1 a sct:SalicylateProphylaxis. _:e_e_bn_5_1_1 a :ViralDisease. _:e_sk_0_1 a :ContraindicationWarning. _:e_e_e_avd_1_1_1 :ageRange _:e_e_bn_1_1_1. _:e_e_bn_1_1_1 :op math:lessThan. _:e_e_bn_1_1_1 :limit "19"^^xsd:int. _:e_e_e_avd_1_1_1 sct:associatedFinding _:e_e_bn_2_1_1. _:e_e_e_pc0_1_1_1 sct:associatedFinding _:e_e_bn_5_1_1. _:e_e_e_avd_1_1_1 sct:findingContext sct:Suspected. _:e_e_e_pc0_1_1_1 sct:findingContext sct:Suspected. _:e_e_e_avd_1_1_1 sct:associatedProcedure _:e_e_bn_3_1_1. _:e_e_e_avd_1_1_1 sct:procedureContext sct:Contraindicated. :p0 :age "11"^^xsd:int. :p0 :prescription _:e_e_bn_4_1_1. :p0 :hasContext _:e_e_e_pc0_1_1_1. _:e_sk_0_1 :causedBy sct:SalicylateProphylaxis. {_:sk_0 a :Recommendation. _:sk_0 :ageRange _:sk_1. _:sk_1 :op _:sk_2. _:sk_1 :limit _:sk_3. _:sk_4 :age _:sk_5. _:sk_5 _:sk_2 _:sk_3. _:sk_4 :hasContext _:sk_6. _:sk_6 sct:associatedFinding _:sk_7. _:sk_7 a _:sk_8. _:sk_6 sct:findingContext sct:Suspected. _:sk_0 sct:associatedFinding _:sk_9. _:sk_9 a _:sk_8. _:sk_0 sct:findingContext sct:Suspected. _:sk_4 :prescription _:sk_10. _:sk_10 a _:sk_11. _:sk_0 sct:associatedProcedure _:sk_12. _:sk_12 a _:sk_11. _:sk_0 sct:procedureContext sct:Contraindicated} => {_:sk_13 a :ContraindicationWarning. _:sk_13 :causedBy _:sk_11}}.
+
+#2019-08-21T12:34:32.330Z in=24 out=1 ent=1 step=1 brake=1 inf=79457 sec=0.072 inf/sec=1103569
+#ENDS
+

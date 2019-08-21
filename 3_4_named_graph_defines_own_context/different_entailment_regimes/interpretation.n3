@@ -1,18 +1,19 @@
 PREFIX ex: <https://example.org/ns/example#> 
-PREFIX : <https://example.org/ns/semantics#> 
+PREFIX sem: <https://example.org/ns/semantics#> 
 PREFIX log: <http://www.w3.org/2000/10/swap/log#>
 PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
 
 {
-?x :ownContext2 ?y. 
+?x sem:isolatedGraph ?y. 
 
 
 #here we have the entailment regime, each graph has its own
-?x :entailment ?regime.
+?x sem:entailment ?regime.
 ?regime log:semantics ?graph.
 
 #conjunction of context and entailment
 (?y ?graph) log:conjunction ?all.
+
 
 #now we take the consequence of all that
 ?all log:conclusion ?out
@@ -21,5 +22,5 @@ PREFIX e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>
 =>
 {
 #the outcome is only valid in the context
-?x :ownContext2 ?out
+?x sem:isolatedGraph ?out
 }.
