@@ -1,14 +1,14 @@
-#Processed by EYE v19.0705.1450 josd
+#Processed by EYE v19.0817.2233 josd
 #eye example.n3 --query check_interpretation.n3 --nope
 
-PREFIX ex: <https://example.org/ns/example#>
-PREFIX : <https://example.org/ns/semantics#>
+PREFIX : <https://example.org/ns/example#>
+PREFIX sem: <https://example.org/ns/semantics#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX log: <http://www.w3.org/2000/10/swap/log#>
 
-<https://raw.githubusercontent.com/IDLabResearch/TriGRules/master/3_5_named_graph_relates_to_what_the_graph_name_dereferences_to/g1.n3> :CheckedExactDereference {:a :b :c. :d :e :f}.
+<https://raw.githubusercontent.com/IDLabResearch/TriGRules/master/3_5_named_graph_relates_to_what_the_graph_name_dereferences_to/g1.n3> sem:confiremedEqual {:a :b :c. :d :e :f}.
 
-#2019-08-11T20:32:20.732Z in=4 out=1 ent=1 step=1 brake=1 inf=25190 sec=0.064 inf/sec=393594
+#2019-08-21T12:52:11.190Z in=4 out=1 ent=1 step=1 brake=1 inf=24792 sec=0.064 inf/sec=387375
 #ENDS
 

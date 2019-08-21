@@ -1,11 +1,12 @@
 PREFIX ex: <https://example.org/ns/example#> 
-PREFIX : <https://example.org/ns/semantics#> 
+PREFIX sem: <https://example.org/ns/semantics#> 
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
 PREFIX log: <http://www.w3.org/2000/10/swap/log#>
 
+
 {
-?x :exactDereference ?d.
+?x sem:onlineEquals ?d.
 
 #get the graph
 ?x log:semantics ?s.
@@ -15,5 +16,5 @@ PREFIX log: <http://www.w3.org/2000/10/swap/log#>
 }
 =>
 {
-?x :CheckedExactDereference ?d.
+?x sem:confiremedEqual ?d.
 }.
