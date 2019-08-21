@@ -1,15 +1,15 @@
 PREFIX ex: <https://example.org/ns/example#> 
-PREFIX : <https://example.org/ns/semantics#> 
+PREFIX sem: <https://example.org/ns/semantics#> 
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
 @prefix log: <http://www.w3.org/2000/10/swap/log#>.
 
 #EXAMPLE 6
 ex:s ex:p ex:o.
-ex:g1 :defaultGraphAsMerge {ex:a ex:b ex:c}.
+ex:g1 sem:combinedWithDefault {ex:a ex:b ex:c}.
 
 #Additional merge example
-ex:g2 :defaultGraphAsMerge {_:x ex:y ex:z}.
-ex:g3 :defaultGraphAsMerge {_:x ex:yy ex:zz}.
+ex:g2 sem:combinedWithDefault {_:x ex:y ex:z}.
+ex:g3 sem:combinedWithDefault {_:x ex:yy ex:zz}.
 
 

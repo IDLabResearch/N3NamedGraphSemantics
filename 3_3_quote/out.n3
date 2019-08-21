@@ -1,16 +1,15 @@
-#Processed by EYE v19.0814.1148 josd
+#Processed by EYE v19.0817.2233 josd
 #eye example.n3 --pass --nope
 
 PREFIX ex: <https://example.org/ns/example#>
-PREFIX : <https://example.org/ns/semantics#>
+PREFIX sem: <https://example.org/ns/semantics#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-ex:g1 :denotes {ex:a ex:b ex:c}.
-ex:g2 :denotes {ex:x ex:y ex:z}.
-:example10 :triggered true.
-:example11 :triggered true.
+ex:g1 sem:quotedGraph {ex:a ex:b ex:c}.
+ex:g2 sem:quotedGraph {ex:x ex:y ex:z}.
+<file:///media/doerthe/4EC6F987C6F97017/store/TriGRules/3_3_quote/example.n3#example10> sem:triggered true.
 
-#2019-08-16T21:41:39.206Z in=5 out=4 ent=2 step=4 brake=2 inf=24871 sec=0.057 inf/sec=436333
+#2019-08-21T11:25:08.741Z in=5 out=3 ent=1 step=2 brake=2 inf=24095 sec=0.049 inf/sec=491735
 #ENDS
 

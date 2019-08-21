@@ -1,5 +1,5 @@
 PREFIX ex: <https://example.org/ns/example#> 
-PREFIX : <https://example.org/ns/semantics#> 
+PREFIX sem: <https://example.org/ns/semantics#> 
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
 
@@ -7,8 +7,8 @@ PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
 
 #Example 9
 
-ex:g1 :denotes { ex:a  ex:b  ex:c }.
-ex:g2 :denotes { ex:x  ex:y  ex:z }.
+ex:g1 sem:quotedGraph { ex:a  ex:b  ex:c }.
+ex:g2 sem:quotedGraph { ex:x  ex:y  ex:z }.
 
 #dataset-entails:
 
@@ -17,29 +17,29 @@ ex:g2 :denotes { ex:x  ex:y  ex:z }.
 #Example 10
 
 
-{_:b :denotes { ex:a  ex:b  ex:c }.
-ex:g2 :denotes { ex:x  ex:y  ex:z }.
+{_:b sem:quotedGraph { ex:a  ex:b  ex:c }.
+ex:g2 sem:quotedGraph { ex:x  ex:y  ex:z }.
 } =>
-{:example10 :triggered true}.
+{:example10 sem:triggered true}.
 
 #but does not dataset-entail:
 #Example 11
 
 {
-ex:g1 :denotes { []  ex:b  ex:c }.
-ex:g2 :denotes { ex:x  ex:y  ex:z }.
+ex:g1 sem:quotedGraph { []  ex:b  ex:c }.
+ex:g2 sem:quotedGraph { ex:x  ex:y  ex:z }.
 }
 =>
-{:example11 :triggered true}.
+{:example11 sem:triggered true}.
 
 
 #nor:
 #Example 12
 
 {
-ex:g1 :denotes {  }.
+ex:g1 sem:quotedGraph {  }.
 }
 =>
-{:example12 :triggered true}.
+{:example12 sem:triggered true}.
 
 

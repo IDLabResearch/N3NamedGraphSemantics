@@ -1,4 +1,4 @@
 PREFIX ex: <https://example.org/ns/example#> 
-PREFIX : <https://example.org/ns/semantics#> 
+PREFIX sem: <https://example.org/ns/semantics#> 
 
-{?x :defaultGraphAsMerge ?y}=>?y.
+{?x sem:combinedWithDefault ?y}=>?y.
