@@ -1,4 +1,0 @@
-PREFIX ex: <https://example.org/ns/example#> 
-PREFIX : <https://example.org/ns/semantics#> 
-
-{?x :defaultGraphAsMerge ?y}=>?y.
